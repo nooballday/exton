@@ -11,7 +11,7 @@ import { errorExceptionHandler } from '../plugin/errorHandler'
  * @param {function} error_handler override error handler if you have your own handler,
  *  a controller error handler will be priority rather than global error handler
  */
-function expressRoutes(config = { dir_as_path: true}) {
+function expressRoutes(config = { dir_as_path: true }) {
     const routes = Router()
     const routePath = path.join(__dirname, '..', '..', 'controller')
 
@@ -26,6 +26,9 @@ function expressRoutes(config = { dir_as_path: true}) {
                         const errorHandler = errorExceptionHandler(endPoint.handler)
                         const endPointPath = `${config.dir_as_path ? `/${file}` : ''}${endPoint.path}`
                         switch (endPoint.method) {
+                            case 'USE':
+                                routes.use(endPointPath, endPoint.middleware, errorExceptionHandler(endPoint.handler))
+                                break
                             case 'POST':
                                 routes.post(endPointPath, endPoint.middleware, errorExceptionHandler(endPoint.handler))
                                 break
