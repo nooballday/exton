@@ -1,9 +1,9 @@
 {
   "name": "nextgen-spaj-express",
   "version": "1.0.0",
-  "description": "Web API for Prisma BRILife APp",
+  "description": "A kick start codes for your express web API",
   "main": "index.js",
-  "author": "Naufal, Ujang",
+  "author": "Naufal",
   "license": "MIT",
   "babel": {
     "presets": [
