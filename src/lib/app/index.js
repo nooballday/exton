@@ -1,13 +1,13 @@
 'use strict'
 
-import { config as env } from "dotenv"
+import { config as env } from 'dotenv'
 
-import express, { Router as server } from 'express'
+import express from 'express'
 import bodyParser from 'body-parser'
 import fs from 'fs'
 import { routes } from '../routes'
 import debug from './debug-constant'
-import { ErrorEvents as emitter } from "../plugin/errorHandler"
+import { ErrorEvents as emitter } from '../plugin/errorHandler'
 
 env()
 
@@ -55,7 +55,7 @@ emitter.on('onControllerError', params => {
             res.send({
                 status: 500,
                 url: process.env.DEBUG ? req.url : undefined,
-                message: process.env.DEBUG ? err.message : "Something went wrong!"
+                message: process.env.DEBUG ? err.message : 'Something went wrong!'
             })
         } else {
             isErrorHanlder(err, req, res, next)

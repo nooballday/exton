@@ -1,4 +1,3 @@
-import { Debug } from "../index"
 import Events from 'events'
 
 const emitter = new Events()

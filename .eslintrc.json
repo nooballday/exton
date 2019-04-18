@@ -1,0 +1,51 @@
+{
+    "env": {
+        "es6": true,
+        "node": true
+    },
+    "extends": "eslint:recommended",
+    "globals": {
+        "Atomics": "readonly",
+        "SharedArrayBuffer": "readonly"
+    },
+    "parserOptions": {
+        "ecmaVersion": 2018,
+        "sourceType": "module"
+    },
+    "rules": {
+        "quotes": [
+            2,
+            "single",
+            {
+                "avoidEscape": true,
+                "allowTemplateLiterals": true
+            }
+        ],
+        "no-console": "off",
+        "eqeqeq": "error",
+        "require-await": "error",
+        "semi": [
+            "error",
+            "never"
+        ],
+        "camelcase": [
+            "error",
+            {
+                "properties": "never"
+            }
+        ],
+        "no-unused-vars": [
+            "error",
+            {
+                "argsIgnorePattern": "^next|req|res|err$"
+            }
+        ],
+        "max-lines-per-function": [
+            "error",
+            {
+                "max": 20,
+                "skipComments": true
+            }
+        ]
+    }
+}

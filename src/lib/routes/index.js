@@ -1,7 +1,7 @@
 import { Router } from 'express'
 import fs from 'fs'
 import path from 'path'
-import Debug from "../app/debug-constant"
+import Debug from '../app/debug-constant'
 import { errorExceptionHandler } from '../plugin/errorHandler'
 
 /**
