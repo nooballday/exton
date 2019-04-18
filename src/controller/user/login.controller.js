@@ -1,7 +1,7 @@
 module.exports = {
     method: 'GET',
     path: '/:name',
-    handler: async function (req, res) { //handler can be separate it doesnt have to be inline here
+    handler: function (req, res) { //handler can be separate it doesnt have to be inline here
         const name = req.params.name
         res.send({
             name: name,

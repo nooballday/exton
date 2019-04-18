@@ -21,7 +21,8 @@ Server.errorHandler(function (err, req, res, next) {
 
 const app = Server.app
 const routes = Server.routes({
-    dir_as_path: true
+    dir_as_path: true,
+    log_route: true
 })
 
 app.use('/api/v1', routes)
