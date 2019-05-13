@@ -9,7 +9,7 @@ import { Server } from './lib'
  */
 Server.errorHandler(function (err, req, res, next) {
     res.send({
-        custom_error : `there is an error in ${req.url} with message : ${err}`
+        custom_error: `there is an error in ${req.url} with message : ${err}`
     })
 })
 
@@ -24,9 +24,10 @@ const routes = Server.routes({
     dir_as_path: true,
     log_route: true
 })
+const server_port = process.env.SERVER_PORT || 8001
 
 app.use('/api/v1', routes)
 
-app.listen(process.env.SERVER_PORT, () => {
-    debug('server:init')(`server running at port : ${process.env.SERVER_PORT} at ${new Date()}`)
+app.listen(server_port, () => {
+    debug('server:init')(`server running at port : ${server_port} at ${new Date()}`)
 })
