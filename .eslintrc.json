@@ -22,7 +22,6 @@
             }
         ],
         "no-console": "off",
-        "eqeqeq": "error",
         "require-await": "error",
         "semi": [
             "error",
@@ -43,7 +42,7 @@
         "max-lines-per-function": [
             "error",
             {
-                "max": 50,
+                "max": 100,
                 "skipComments": true
             }
         ]
