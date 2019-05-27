@@ -4,3 +4,4 @@ dist/
 src/assets/*
 !src/assets/.gitkeep
 config/
+config.json
